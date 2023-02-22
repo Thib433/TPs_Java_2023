@@ -1,3 +1,5 @@
+package TP2_Doireau_G3D;
+
 import java.util.Scanner;
 public class Main2 {
     public static void main(String[] args){
@@ -6,7 +8,13 @@ public class Main2 {
         //max();
         //egaliteStr();
         //factorielle();
-        countdown();
+        //countdown();
+        //carres();
+        //tableMultiplication();
+        //division();
+        //regle();
+        //nombrePremier();
+        tableMultiplication();
     }
 
 
@@ -113,6 +121,87 @@ public class Main2 {
     }
 
     public static void carres(){
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("Saisissez un nombre strictement positif");
+        float x = scanner.nextFloat();
+        System.out.println("X et son carré : "+x+ " et "+ (x*x));
+    }
+
+    //Table de multiplication : le type de boucle le plus approprié est la boucle for car on sait déjà jusquà quelle chiffre on veut aller
+
+    public static void tableMultiplication(){
+        for (int i = 1; i<=10; i++){
+            for (int k = 1; k<=10; k++){
+                System.out.print(" "+i*k);
+
+            }
+            System.out.println("\t");
+
+        }
+    }
+
+    public static void division(){
+        Scanner scanner = new Scanner (System.in);
+        int int1 ;
+        int int2 ;
+        do{
+            System.out.println("Saisissez deux entier différents de 0");
+            int1 = scanner.nextInt();
+            int2 = scanner.nextInt();
+        }while(int2==0);
+        int total = int1/int2;
+        System.out.println("Le résultats de la division d'entier de "+int1+" et "+int2+" donne "+total);
+
+
+    }
+
+    public static void regle() {
+        Scanner scanner = new Scanner(System.in);
+        int val;
+        int k = 1;
+
+        do {
+            System.out.println("Saisissez une valeur entière strictement positive");
+            val = scanner.nextInt();
+        } while (val <= 0);
+
+        for (int i = 1; i<=val; i++){
+
+            if (k==10){
+                System.out.print("-"+"|");
+                k = 1;
+            }else{
+                System.out.print("-");
+                k+=1;
+            }
+
+        }
+    }
+
+    public static void nombrePremier(){
+        Scanner scanner = new Scanner(System.in);
+        int val;
+        do{
+            System.out.println("Saisissez un une valeur entière strictement positif");
+            val = scanner.nextInt();
+        }while(val<=0);
+
+        // dijonction de cas
+
+        if (val == 2){
+            System.out.println("Ce nombre est premier");
+
+        } else {
+            for (int k= 2; k<=val; k++){
+                if (val % k == 0) {
+                    System.out.println("Ce nombre n'est pas premier");
+                    break;
+                }
+            }
+
+        }System.out.println("Ce nombre est premier");
+
+
 
     }
 }
