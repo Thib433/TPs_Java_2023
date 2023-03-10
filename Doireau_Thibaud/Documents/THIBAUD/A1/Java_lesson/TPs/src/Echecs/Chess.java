@@ -41,13 +41,15 @@ public class Chess {
         players2.addName(name_players_two);
         players2.attributeColor(1);
 
-        currentPlayer = players2;
+        currentPlayer = players1;
         //Initialiser la valeur de currentPlayers (blanc)
     }
 
     private void initialiseBoard(){
         //initialisation du plateau
         Cell[][] board = new Cell[8][8];
+
+        System.out.print(board);
 
         //initialisation des pions du blanc
         King king0 = new King();
@@ -201,10 +203,10 @@ public class Chess {
 
     private boolean isValidMove(String move){
         char piece = move.charAt(0);
-        char newRow = move.charAt(1);
-        int newColumn = move.charAt(2);
+        char newColumn = move.charAt(1);
+        int newRow = move.charAt(2);
         if (piece == 'Q'){
-
+            //char startColumn =
         }
         //va ensuite appeler la méthode isValidMove() de la class de la pièce correspondante
 
