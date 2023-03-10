@@ -124,8 +124,8 @@ public class Chess {
         king1.position.row = 8;
 
         Queen Queen1 = new Queen();
-        Queen0.position.column="d";
-        Queen0.position.row=8;
+        Queen1.position.column="d";
+        Queen1.position.row=8;
 
         Bishop bishop11 = new Bishop();
         bishop11.position.column="c";
@@ -213,6 +213,7 @@ public class Chess {
         return false;
     }
 
+
     private void updateBoard(String move){
         //mettre à jour l'échiquier suite au coup qui vient de finir
     }
@@ -220,4 +221,6 @@ public class Chess {
     private void switchPlayer(){
         //changer la valeur de currentPlayer
     }
+
+
 }
