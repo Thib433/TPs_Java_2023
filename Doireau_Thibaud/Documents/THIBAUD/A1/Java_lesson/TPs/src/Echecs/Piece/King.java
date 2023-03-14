@@ -1,7 +1,6 @@
 package Echecs.Piece;
 
 import Echecs.Cell;
-import Echecs.Pieces;
 import Echecs.Position;
 
 public class King  extends Pieces {
