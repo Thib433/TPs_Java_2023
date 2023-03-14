@@ -7,6 +7,7 @@ import Echecs.Position;
 public class Rook extends Pieces {
     @Override
     public boolean isValidMove(Position newPosition, Cell[][] board){
+
         return false;
     }
     @Override
@@ -14,8 +15,5 @@ public class Rook extends Pieces {
 
         return null;
     }
-    public static void main(String[] args){
 
-
-    }
 }
