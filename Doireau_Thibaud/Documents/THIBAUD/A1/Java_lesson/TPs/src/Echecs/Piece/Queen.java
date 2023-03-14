@@ -1,11 +1,11 @@
 package Echecs.Piece;
 
 import Echecs.Cell;
+import Echecs.Pieces;
 import Echecs.Position;
 
-public class Queen {
-    public Position position = new Position();
-    int color ;
+public class Queen extends Pieces {
+    @Override
 
     public boolean isValidMove(Position newPosition, Cell[][] board){
         int startRow = newPosition.row;
@@ -20,13 +20,10 @@ public class Queen {
 
         return false;
     }
-
+    @Override
     public String toString(){
 
         return "Q";
     }
-    public static void main(String[] args){
 
-
-    }
 }
