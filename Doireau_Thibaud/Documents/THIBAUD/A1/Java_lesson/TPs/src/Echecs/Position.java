@@ -1,7 +1,7 @@
 package Echecs;
 
 public class Position {
-    public String column; //colonne
+    public char column; //colonne
     public int row;//ligne
 
     public static void main(String[] args){
@@ -13,23 +13,23 @@ public class Position {
         return column+row;
     }
 
-    public int translate(String a){
+    public int translate(char a){
         switch (a){
-            case "a":
+            case 'a':
                 return 1;
-            case "b":
+            case 'b':
                 return 2;
-            case "c":
+            case 'c':
                 return 3;
-            case "d":
+            case 'd':
                 return 4;
-            case "e":
+            case 'e':
                 return 5;
-            case "f":
+            case 'f':
                 return 6;
-            case "g":
+            case 'g':
                 return 7;
-            case "h":
+            case 'h':
                 return 8;
             default:
                 break;

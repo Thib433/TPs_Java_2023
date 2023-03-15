@@ -2,6 +2,8 @@ package Echecs;
 
 import Echecs.Piece.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Chess {
@@ -51,14 +53,18 @@ public class Chess {
 
         System.out.print(board);
 
+        for (int k = 1; k<=8; k++){
+            //board[2][k]= new Pawn();
+        }
+
         //initialisation des pions du blanc
         King king0 = new King();
-        king0.position.column="e";
+        king0.position.column='e';
         king0.position.row = 1;
 
-        Queen Queen0 = new Queen();
-        Queen0.position.column="d";
-        Queen0.position.row=1;
+        Queen queen0 = new Queen();
+        queen0.position.column="d";
+        queen0.position.row=1;
 
         Bishop bishop01 = new Bishop();
         bishop01.position.column="c";
@@ -115,6 +121,12 @@ public class Chess {
         Pawn pawn08 = new Pawn();
         pawn08.position.column="h";
         pawn08.position.row=2;
+
+        List<Pieces> whitePieces = new ArrayList<>();
+        whitePieces.add(king0);
+        whitePieces.add(queen0);
+        whitePieces.add(bishop01);
+        whitePieces.add();
 
 
 
@@ -183,6 +195,7 @@ public class Chess {
         pawn18.position.column="h";
         pawn18.position.row=7;
         // initialise l'échiquier
+
     }
 
     private void printBoard(){
@@ -192,7 +205,7 @@ public class Chess {
     private String askMove(){
         Scanner scanner = new Scanner(System.in);
         //demander au joueur en cours de saisir son prochain coup, en spécifiant la pièce à déplacer puis le nouvel emplacement
-        System.out.println("Saisissez votre prochain déplacement sous la forme : Pcl (Piece/colonne/ligne");
+        System.out.println("Saisissez votre prochain déplacement sous la forme : Pcl (Piece/colonne/ligne) Pnn(Piece/nouvelle_col/ nouvelle_lign");
         return scanner.nextLine();
     }
 
@@ -202,11 +215,17 @@ public class Chess {
     }
 
     private boolean isValidMove(String move){
-        char piece = move.charAt(0);
-        char newColumn = move.charAt(1);
-        int newRow = move.charAt(2);
-        if (piece == 'Q'){
-            //char startColumn =
+        //demander à l'utilisateur de saisir le déplacement au bon format
+        char typePiece = move.charAt(0);
+        char lastColumn = move.charAt(1);
+        int lastRow = move.charAt(2);
+
+        char newPiece = move.charAt(3);
+        int newRow = move.charAt(4);
+
+        if (typePiece == 'Q'){
+            Pieces selectedPiece = null;
+            //for (Pieces pieces : )
         }
         //va ensuite appeler la méthode isValidMove() de la class de la pièce correspondante
 
