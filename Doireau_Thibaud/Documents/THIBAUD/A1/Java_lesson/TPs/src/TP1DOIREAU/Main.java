@@ -1,3 +1,5 @@
+package TP1DOIREAU;
+
 import java.util.Scanner;
 import java.awt.Graphics;
 import javax.swing.*;
@@ -27,9 +29,9 @@ public class Main {
 
         System.out.println("Bienvenue " + prenom);
         */
-        division();
+        //division();
         somme();
-        volume();
+        //volume();
 
 
     }

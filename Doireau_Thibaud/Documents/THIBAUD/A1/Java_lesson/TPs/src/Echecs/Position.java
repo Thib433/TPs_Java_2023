@@ -8,10 +8,10 @@ public class Position {
 
     }
 
-    public String toString(){
+    /*public String toString(){
 
         return column+row;
-    }
+    }*/
 
     public int translate(char a){
         switch (a){

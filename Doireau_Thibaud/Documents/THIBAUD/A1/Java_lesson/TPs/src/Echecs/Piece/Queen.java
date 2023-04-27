@@ -8,7 +8,7 @@ public class Queen extends Pieces {
 
     public boolean isValidMove(Position newPosition, Cell[][] board){
         int startRow = newPosition.row;
-        String startColumn = newPosition.column;
+        //String startColumn = newPosition.column;
         //int finRow = board.position[0]; //créer l'attribut board et donc le reste de des classes
         Cell[] finColumn = board[2];
 
